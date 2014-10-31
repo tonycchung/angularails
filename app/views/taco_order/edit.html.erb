@@ -27,22 +27,10 @@
 
       <div class="form-group">
         <label>Cheese</label>
-        <div class="radio">
+        <div class="radio" ng-repeat="cheese in cheeses">
           <label>
-            <input type="radio" value="No Cheese" ng-model="taco.cheese"></input>
-            No Cheese
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="Normal Cheese" ng-model="taco.cheese"></input>
-            Normal Cheese
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" value="Mucho Queso" ng-model="taco.cheese"></input>
-            Mucho Queso
+            <input type="radio" value="{{ cheese }}" ng-model="taco.cheese"></input>
+            {{ cheese }}
           </label>
         </div>
       </div>
