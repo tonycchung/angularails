@@ -7,12 +7,14 @@
         <label for="name">Name your creation</label>
         <input type="text" class="form-control" placeholder="Super Tasty" ng-model="taco.name"></input>
       </div>
+
       <div class="form-group">
         <label for="filling">Select your filling</label>
         <select ng-model="taco.filling" class="form-control" ng-options="f for f in fillings">
           <option value="">Pick a filling</option>
         </select>
       </div>
+
       <div class="form-group">
         <label>Extras</label>
         <div class="checkbox" ng-repeat="extra in extras">
@@ -22,6 +24,29 @@
           </label>
         </div>
       </div>
+
+      <div class="form-group">
+        <label>Cheese</label>
+        <div class="radio">
+          <label>
+            <input type="radio" value="No Cheese" ng-model="taco.cheese"></input>
+            No Cheese
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" value="Normal Cheese" ng-model="taco.cheese"></input>
+            Normal Cheese
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" value="Mucho Queso" ng-model="taco.cheese"></input>
+            Mucho Queso
+          </label>
+        </div>
+      </div>
+
       <button class="btn btn-primary">
        Submit
       </button>
@@ -40,6 +65,7 @@
               {{ extra }}
             </span>
           </td>
+          <td>{{ taco.cheese }}</td>
         </tr>
       </tbody>
     </table>
