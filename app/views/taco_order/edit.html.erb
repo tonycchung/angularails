@@ -7,6 +7,14 @@
         <label for="name">Name your creation</label>
         <input type="text" class="form-control" placeholder="Super Tasty" ng-model="taco.name"></input>
       </div>
+      <div class="form-group">
+        <label for="filling">Select your filling</label>
+        <select ng-model="taco.filling" class="form-control">
+          <option>Beef</option>
+          <option>Chicken</option>
+          <option>Fish</option>
+        </select>
+      </div>
       <button class="btn btn-primary">
        Submit
       </button>
@@ -19,6 +27,7 @@
       <tbody>
         <tr ng-repeat="taco in tacos">
           <td>{{ taco.name }}</td>
+          <td>{{ taco.filling }}</td>
         </tr>
       </tbody>
     </table>
