@@ -2,12 +2,12 @@
   <div class="row">
     <div class="col-md-12">
       <h1>Oh noes!</h1>
-      Message is "{{ message }}"
-      <input type="text" class="form-controler" ng-model="message" />
+      Message is "{{ someModel.message }}"
+      <input type="text" class="form-controler" ng-model="someModel.message" />
       <ul class="list-unstyled">
         <li ng-repeat="s in stuff" style="margin-top: 10px">
           Message is "{{ message }}"
-          <input type="text" class="form-control" ng-model="message" />
+          <input type="text" class="form-control" ng-model="someModel.message" />
         </li>
       </ul>
     </div>
