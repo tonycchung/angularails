@@ -1,6 +1,6 @@
 AngulaRails.controller "TacoOrderController", ($scope) ->
   $scope.tacos = []
-  $scope.tacos = {}
+  $scope.taco = {}
 
   $scope.clear = () ->
     $scope.taco = {}
